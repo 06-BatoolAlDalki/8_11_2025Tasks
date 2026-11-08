@@ -9,7 +9,7 @@ namespace WebApplication57.Controllers
         static List<Offer> offers = new List<Offer>
         {
 
-       
+       //ggg
             // Certificates
         new Offer { Id = 1, Category = "Certificates", SupplierName = "Supplier A", OfferName = "Premium Certificate Package", Quantity = 35, UnitPrice = 2 },
         new Offer { Id = 2, Category = "Certificates", SupplierName = "Supplier B", OfferName = "Standard Certificate Package", Quantity = 35, UnitPrice = 1.5m },
