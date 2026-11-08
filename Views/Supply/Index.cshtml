@@ -1,0 +1,30 @@
+﻿@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+}
+@model List<Offer>
+
+<h2>Graduation Supply Offers</h2>
+
+@foreach (var offer in Model)
+{
+        <div class="card p-3 m-2">
+
+            <h4>@offer.Category</h4>
+
+            <p>Supplier: @offer.SupplierName</p>
+
+            <p>Offer: @offer.OfferName</p>
+
+            <p>Quantity: @offer.Quantity</p>
+
+            <p>Unit Price: @offer.UnitPrice JD</p>
+
+            <a href="@Url.Action("SelectOffer", "Supply", new { id = offer.Id })"
+               class="btn btn-primary">
+                Select Offer
+            </a>
+
+        </div>
+}

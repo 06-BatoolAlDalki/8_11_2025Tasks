@@ -1,0 +1,41 @@
+﻿@model List<NewOffer>
+
+
+
+<table class="table">
+    <thead>
+        <tr>
+            <th scope="col">OfferId</th>
+            <th scope="col">Category</th>
+            <th scope="col">Supply</th>
+            <th scope="col">Offer Name</th>
+            <th scope="col">Offer Quantity</th>
+            <th scope="col">Offer UnitPrice</th>
+            <th scope="col">Selected offer</th>
+        </tr>
+    </thead>
+    <tbody>
+        @if(Model != null && Model.Count > 0)
+        {
+            @foreach (var item in Model)
+            {
+                <tr>
+                    <th>@item.OfferId</th>
+                    <td>@item.Category</td>
+                    <td>@item.Supply</td>
+                    <td>@item.OfferName</td>
+                    <td>@item.Quantity</td>
+                    <td>@item.UnitPrice</td>
+                    <td>  <a href="@Url.Action("SelectedOffer" , "Offer" , new { id=item.OfferId  })">Selected Offer</a>   </td>
+                </tr>
+
+            }
+        }
+        else
+        {
+            <tr><td>No content</td></tr>
+        }
+
+    </tbody>
+</table>
+

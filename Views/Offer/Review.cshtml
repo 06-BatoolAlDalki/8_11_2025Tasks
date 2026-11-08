@@ -1,0 +1,30 @@
+﻿@model List<NewOffer>
+
+    <h2>Review Supply Request</h2>
+
+
+<table class="table">
+    <thead>
+        <tr>
+            <th scope="col">Category</th>
+            <th scope="col">Offer name</th>
+            <th scope="col">Quantily</th>
+            <th scope="col">Unit price</th>
+        </tr>
+    </thead>
+    <tbody>
+       
+        @foreach(var item in Model)
+        {
+            <tr>
+                <th >@item.Category</th>
+                <td>@item.OfferName</td>
+                <td>@item.Quantity</td>
+                <td>@item.UnitPrice</td>
+            </tr>
+        }
+    </tbody>
+</table>
+
+<h1>@ViewBag.Total</h1>
+
