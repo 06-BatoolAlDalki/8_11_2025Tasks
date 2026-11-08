@@ -1,0 +1,23 @@
+﻿
+
+@model List<Manager>
+
+<table class="table">
+    <thead>
+        <tr>
+            <th scope="col">Id</th>
+            <th scope="col">Name</th>
+           
+        </tr>
+    </thead>
+    <tbody>
+        @foreach(var item in Model)  // list of managers 
+        {
+            <tr>
+                <td>@item.Id</td>
+                <td>@item.Name</td>
+            </tr>
+            
+        }
+    </tbody>
+</table>
